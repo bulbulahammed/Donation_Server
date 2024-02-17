@@ -1,4 +1,5 @@
 const express = require('express');
+const userRoutes = require('./app/routes/userRoute');
 const app = express();
 const mongoose = require('mongoose');
 const dotenv = require("dotenv");
@@ -19,7 +20,8 @@ mongoose.connect(url,{
 .then(()=> console.log('Database connection established'))
 .catch(err => console.log(err));
 
-
+// Creating Route for users
+app.use('/api/users',userRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello, From Donation Server! ✌')
