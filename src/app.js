@@ -12,8 +12,8 @@ app.use(cors());
 // Apply Json
 app.use(express.json());
 
-const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.qwjqwpy.mongodb.net/Donation?retryWrites=true&w=majority
-`;
+const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.kctec8p.mongodb.net/Donation?retryWrites=true&w=majority&appName=Cluster0`;
+
 
 mongoose.connect(url,{
 })
